@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css">
+        <title>TotalPools</title>
+    </head>
+    <body>
+    <div id="contentWrapper">
+        <div id="header">
+            <div id="headerLogo">
+                <img src="img/Zwembad%20Totaal%20Logo.svg">
+            </div>
+            <div id="navWrapper">
+                <div id="fadeIn">
+
+                </div>
+                <div class="dropdown" style="float:left;">
+                    <div class="nav checked" id="first">
+                        <p>Home</p>
+                    </div>
+                </div>
+                <div class="dropdown" style="float:left;">
+                    <div class="nav" id="about">
+                        <p>About</p>
+                        <div class="dropdown-content" style="left:0;">
+                            <div class="dropdown-element" id="scrollMission" onclick="scrollDown()">
+                                <p>Our Mission</p>
+                            </div>
+                            <div class="dropdown-element">
+                                <p>Meet The Team</p>
+                            </div>
+                            <div class="dropdown-element">
+                                <p>Testimonials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown" style="float:left;">
+                    <div class="nav" id="pools">
+                        <p>Pools</p>
+                        <div class="dropdown-content" style="left:0;">
+                            <div class="dropdown-element">
+                                <p>Luxury Pools</p>
+                            </div>
+                            <div class="dropdown-element">
+                                <p>Deluxe Pools</p>
+                            </div>
+                            <div class="dropdown-element">
+                                <p>Pool Accessories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown" style="float:left;">
+                    <div class="nav" id="spas">
+                        <p>Spas</p>
+                        <div class="dropdown-content" style="left:0;">
+                            <div class="dropdown-element">
+                                <p>Luxury Spas</p>
+                            </div>
+                            <div class="dropdown-element">
+                                <p>Deluxe Spas</p>
+                            </div>
+                            <div class="dropdown-element">
+                                <p>Spa Accessories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown" style="float:left;">
+                    <div class="nav" id="last">
+                        <p>Maintenance</p>
+                        <div class="dropdown-content" style="left:0;">
+                            <div class="dropdown-element">
+                                <p>Pool Maintenance</p>
+                            </div>
+                            <div class="dropdown-element">
+                                <p>Spa Maintenance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fadeOut">
+
+                </div>
+            </div>
+            <div id="socials">
+                <div id="mobile">
+                    <div class="socialImg">
+                        <img src="img/phone.svg" height="62%">
+                    </div>
+                    <div class="socialInfo">
+                        <p>+44 99999999</p>
+                    </div>
+
+                </div>
+                <div id="email">
+                    <div class="socialImg">
+                        <img src="img/mail.svg" height="40%">
+                    </div>
+                    <div class="socialInfo">
+                        <p>swimmingpools@portfolio.com</p>
+                    </div>
+                </div>
+            </div>
+            <div id="loginButtonWrapper">
+                <button type="button" id="loginButton" onclick="revealLoginScreen()">
+                    Sign In
+                </button>
+            </div>
+        </div>
+        <div id="loginScreenContainer">
+            <div id="loginScreenHeader">
+            </div>
+            <div class="loginScreenSection">
+                <div class="loginHeader">
+                    <h1>Sign In</h1>
+                </div>
+            </div>
+            <div class="loginScreenSection">
+                <div class="loginHeader">
+                    <h1>Register</h1>
+                </div>
+                <form class="modal-content" action="/action_page.php">
+                    <div class="container">
+
+                        <hr>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                        </label>
+
+                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                        <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="fadeScreen">
+
+        </div>
+        <div id="parallax">
+            <div id="wellness">
+
+            </div>
+        </div>
+
+        <div id="spaContainer">
+            <div class="poolInfo" id="leftPoolInfo">
+                <div class="poolText">
+                    <p>
+                        Promising to deliver unparalleled elegance, no detail goes unmissed with our bespoke build process.
+                        We facilitate constant communication with the client to ensure their every whim pertaining to their
+                        pool is delivered .
+                    </p>
+                </div>
+                <div id="poolPicLeft">
+                </div>
+            </div>
+            <div class="poolInfo" id="rightPoolInfo">
+                <div id="poolPicRight">
+
+                </div>
+                <div class="poolText" id="rightPoolText">
+                    <p>
+                        If a bespoke pool is what you want, you have come to the right place. We sell generic branded pools
+                        in addition to
+                        top of the line bespoke pools of your design. Work with one of our artists to curate your dream
+                        pool.
+                    </p>
+                </div>
+                <div id="getInTouchWrapper">
+                    <button type="button" id="getInTouch">Get In Touch</button>
+                    <div id="buttonRightSideShadow">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="shadowed">
+            <div id="spaHeaderWrapper">
+                <div class="spaHeader">
+                    <div class="spaInfo" id="spaInfoLeft">
+                        <div class="spaText" id="spaImgLeft">
+
+                        </div>
+                        <div class="spaText" id="spaTextLeft">
+                            <p>Any location is acceptable. No matter how difficult to install, we promise a perfect finish every time.</p>
+                            <p id="spaTextTwo">Sit back and relax in your brand new spa.</p>
+                        </div>
+
+                    </div>
+                    <div class="spaInfo" id="spaInfoRight">
+                        <div class="spaText" id="spaTextRight">
+                            <p>Guaranteed to find your perfect dream spa, browse our collection today.</p>
+                            <div id="browseSpasWrapper">
+                                <button type="button" id="browseSpas">Browse Now</button>
+                            </div>
+                        </div>
+
+                        <div class="spaText" id="spaImgRight">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="shadowed">
+        </div>
+
+        <div id="footer">
+            <hr id="footerShadow">
+            <div id="footerContentWrapper">
+
+                <div class="footerContent">
+                    <div class="footerHeader" id="mapHeader">
+                        <h1>
+                            Find Us
+                        </h1>
+                    </div>
+                    <div id="map" style="width: 100%; height:calc(100% - 50px)"></div>
+                    <script
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA4-8IkN5HNsILf-vwyTfe4T6P-lubfeA&callback=initMap&libraries=&v=weekly" async>
+                    </script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="javascript/navigation.js"></script>
+        <script> window.onload=insideOrOutside() </script>
+
+    </body>
+</html>
