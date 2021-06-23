@@ -1040,7 +1040,7 @@ margin-bottom: 150px;
     }
     #headerWrapper
     {
-        height: 162px;
+        height: 100px;
     }
     #socials
     {
@@ -1051,6 +1051,7 @@ margin-bottom: 150px;
         margin-top: 100px;
         justify-content: center;
         gap: 10px;
+        display:none
     }
     #burgerMenu
     {
@@ -1070,6 +1071,8 @@ margin-bottom: 150px;
         margin: auto;
         margin-top: 10px;
         right: 0;
+        width: 200px;
+        margin-left: 15px;
     }
     #mobile
     {
