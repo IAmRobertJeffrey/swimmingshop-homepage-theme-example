@@ -1,32 +1,47 @@
-    $(".nav").hover(function(){
-        $(this).css("background-color", "rgba(245, 245, 245, 0.6)");
-        $(".checked").css("border-bottom", "5px none #0587CA");
-        $(this).css("border-bottom", "5px solid #0587CA");
-        $(this).css("border-radius", "-25px");
-        $(this).css("border-radius", "-25px");
+    let navs = document.querySelectorAll(".nav");
+    navs.forEach(currentNav => 
+    {
+        currentNav.addEventListener("mouseover", addBorder)
+        currentNav.addEventListener("mouseout", removeBorder)
+    })
+    
 
-
-    }, function(){
-        $(this).css("background-color", "rgba(245, 245, 245, 0.35)");
-        $(this).css("border-bottom", "3px none red");
-
-        $(".checked").css("border-bottom", "5px solid #0587CA");
-    });
-
-
-
-    let images= ["img/mainpoolphoto.jpg","img/raphael-biscaldi-7RQf2X6aXXI-unsplash.jpg","img/pool3.jpg"], i = 0;
-
-    function volgendefoto() {
-        i<images.length - 1?i+=1:i=0;
-        document.getElementById('parallax').style.backgroundImage = "url(" + images[i] + ")";
-
-
+    function addBorder(currentNav)
+    {
+        currentNav.currentTarget.style.borderBottom = "5px solid #0587CA";
+        currentNav.currentTarget.style.backgroundColor = "rgba(132, 181, 207, 0.1)"
     }
-    setInterval(volgendefoto, 5000);
+
+    function removeBorder(currentNav)
+    {
+        currentNav.currentTarget.style.borderBottom = "0px solid #0587CA";
+        currentNav.currentTarget.style.backgroundColor = "rgba(245, 245, 245, 0.0)"
+    }
 
 
-    initMap();
+    let images= ["img/mainpoolphoto.jpg","img/raphael-biscaldi-7RQf2X6aXXI-unsplash.jpg","img/pool3.jpg"];
+    let i = 0;
+
+    function changePicture() 
+    {
+        document.getElementById("parallax").style.opacity = "1"
+        console.log("hey");
+        document.getElementById('parallax').style.backgroundImage = "url(" + images[i] + ")";
+        if(i < images.length - 1)
+        {
+            i++;
+        }
+        else
+        {
+            i = 0;
+        }
+        
+    }
+
+    setInterval(changePicture, 5000);
+
+
+    initMap(i);
 
     function initMap() {
 
@@ -70,29 +85,29 @@
     }
 
 
-    function insideOrOutside(){
-        document.addEventListener('click', function(e)
-        {
+    // function insideOrOutside(){
+    //     document.addEventListener('click', function(e)
+    //     {
 
-            if(document.getElementById('loginScreenContainer').style.visibility === "visible")
-            {
-                if (!document.getElementById('loginButton').contains(e.target)) {
-
-
-                    if (document.getElementById('loginScreenContainer').contains(e.target)) {
-
-                    } else {
-
-                        document.getElementById('fadeScreen').style.opacity = "0";
-                        document.getElementById('loginScreenContainer').style.opacity = "0";
-                        document.getElementById('fadeScreen').style.visibility = "hidden";
-                        document.getElementById('loginScreenContainer').style.visibility = "hidden";
+    //         if(document.getElementById('loginScreenContainer').style.visibility === "visible")
+    //         {
+    //             if (!document.getElementById('loginButton').contains(e.target)) {
 
 
-                    }
-                }
-            }
+    //                 if (document.getElementById('loginScreenContainer').contains(e.target)) {
 
-        });
+    //                 } else {
 
-    }
+    //                     document.getElementById('fadeScreen').style.opacity = "0";
+    //                     document.getElementById('loginScreenContainer').style.opacity = "0";
+    //                     document.getElementById('fadeScreen').style.visibility = "hidden";
+    //                     document.getElementById('loginScreenContainer').style.visibility = "hidden";
+
+
+    //                 }
+    //             }
+    //         }
+
+    //     });
+
+    // }

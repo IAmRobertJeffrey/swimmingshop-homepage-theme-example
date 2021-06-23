@@ -36,13 +36,44 @@ body {
 
 }
 
-#header {
+.logo
+{
+    height:75px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    margin-left: 25px;
+
+}
+
+#headerWrapper
+{
     width: 100%;
     height: 100px;
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba(245, 245, 245, 0.9);
+
+}
+
+#header {
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    height: 62px;
+    display:flex;
+    align-items: center;
+    justify-items: space-between;
+    justify-content: space-between;
     top: 0;
     z-index: 5;
-    background-color: rgba(245, 245, 245, 0.8);
+    
 
 
 }
@@ -60,7 +91,7 @@ body {
 }
 
 #parallax {
-    background-image: url("img/mainpoolphoto.jpg");
+    /* background-image: url("img/mainpoolphoto.jpg"); */
     height: 800px;
     width: 100%;
     float: left;
@@ -72,12 +103,25 @@ body {
     padding: 15%;
 
     overflow: hidden; /*  hide scrollbars */
-    opacity: 1.0;
-    -webkit-transition: background 1s ease-in-out;
-    -moz-transition: background 1s ease-in-out;
-    -o-transition: background 1s ease-in-out;
-    transition: background 1s ease-in-out;
+    opacity: 0.0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
 
+}
+#pools
+{
+    width: 100%;
+    height: 100%;
+}
+#pool1, #pool2, #pool3
+{
+    display: none;
 }
 
 #wellness {
@@ -97,10 +141,12 @@ body {
 }
 
 #navWrapper {
-    width: 1050px;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 600px;
+    display: flex;
+    position: absolute;
+left: 50%;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%)
 }
 
 .dropdown {
@@ -141,17 +187,19 @@ body {
 
 .nav {
 
-    height: 100px;
+    height: 62px;
     width: 150px;
-    float: left;
-    background-color: rgba(245, 245, 245, 0.35);
-    position: relative;
-    display: inline-block;
+    /* background-color: rgba(245, 245, 245, 0.35); */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 0.1s;
 
 }
 
 .nav p {
-    line-height: 100px;
+    line-height: 62px;
     text-align: center;
     font-family: navFont;
     letter-spacing: 3px;
@@ -183,58 +231,59 @@ body {
 }
 
 #socials {
-    height: 100px;
-    width: 270px;
+    height: 38px;
+    width: 420px;
     float: right;
+    display: flex;
+    align-self: flex-end;
+margin-right: 25px;
 }
+
 
 #mobile {
 
     width: 100%;
-    height: 50%;
-    vertical-align: middle;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #email {
 
     width: 100%;
-    height: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #mobile img {
     vertical-align: middle;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    float: left;
-    display: table-cell;
     vertical-align: middle;
-    pointer-events: none
+    pointer-events: none;
+    margin-right:10px;
 }
 
 #email img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    
     vertical-align: middle;
-    display: table-cell;
     vertical-align: middle;
-    pointer-events: none
+    pointer-events: none;
+    margin-right: 10px;
 }
 
 .socialImg {
     height: 100%;
-    width: 50px;
-    float: left;
-    position: relative;
+    width: 30px;
+    
+   
 }
 
 .socialInfo {
     height: 100%;
     width: calc(100% - 50px);
-    float: left;
+    
 }
 
 #mobile p {
@@ -434,7 +483,7 @@ body {
 }
 
 #rightPoolText {
-    height: 85%;
+    height: 100%;
     padding-bottom: 0;
 }
 
@@ -484,7 +533,41 @@ body {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     box-shadow: inset 0px 20px 30px -14px rgb(0 0 0 / 71%);
+    box-shadow:
+  0 2.3px 1.9px rgba(0, 0, 0, 0.028),
+  0 5.4px 4.3px rgba(0, 0, 0, 0.041),
+  0 9.7px 7.7px rgba(0, 0, 0, 0.051),
+  0 16.1px 12.8px rgba(0, 0, 0, 0.059),
+  0 26.5px 21.2px rgba(0, 0, 0, 0.069),
+  0 46.2px 37px rgba(0, 0, 0, 0.082),
+  0 100px 80px rgba(0, 0, 0, 0.11)
+;
+margin-bottom: 150px;
+   
 }
+
+.poolHeader {
+    width: 1000px;
+    height: 1000px;
+    background-color: #0587CA;
+    position: relative;
+    border-bottom-right-radius: 50px;
+    box-shadow:
+  0 2.3px 1.9px rgba(0, 0, 0, 0.028),
+  0 5.4px 4.3px rgba(0, 0, 0, 0.041),
+  0 9.7px 7.7px rgba(0, 0, 0, 0.051),
+  0 16.1px 12.8px rgba(0, 0, 0, 0.059),
+  0 26.5px 21.2px rgba(0, 0, 0, 0.069),
+  0 46.2px 37px rgba(0, 0, 0, 0.082),
+  0 100px 80px rgba(0, 0, 0, 0.11)
+;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 150px;
+
+}
+
+
 
 .spaText {
     width: 50%;
@@ -569,13 +652,31 @@ body {
     -ms-transition: background-color 200ms ease-in-out;
     transition: border-top-left-radius 200ms ease-in-out, background-color 200ms ease-in-out;
 }
+#loginWrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+    position:absolute;
+    right: 0;
+    margin-right: 25px;
+    height: 62px;
+    
+}
 
 #loginButton {
-    width: 150px;
+    
+    width: 100px;
     height: 100%;
     /*background-color: #0587ca;*/
     background-color: rgba(5, 135, 202, 0.6);
-    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
     z-index: 1;
     font-family: navFont, serif;
     font-size: 20px;
@@ -592,7 +693,7 @@ body {
 
     /*background-color: #076a9b;*/
     background-color: rgba(7, 106, 155, 0.8);
-    border-top-right-radius: 50px;
+    /* border-top-right-radius: 50px; */
     -webkit-transition: background-color 200ms ease-in-out;
     -ms-transition: background-color 200ms ease-in-out;
     transition: border-top-right-radius 200ms ease-in-out, background-color 200ms ease-in-out;
@@ -689,6 +790,11 @@ body {
     font-size: 20px;
     color: antiquewhite;
 }
+#tabletMenu
+{
+    height: 100%;
+    display: flex;
+}
 
 @media only screen and (max-width: 1890px) and (min-width: 1018px) {
     #spaContainer {
@@ -758,6 +864,7 @@ body {
     #spaHeaderWrapper{
         width: 100%;
         height: 1000px;
+        
     }
 }
 
@@ -774,14 +881,18 @@ body {
 
     .poolInfo
     {
-        width: 500px;
+        width: 100%;
 
 
+    }
+    .poolHeader
+    {
+        width: 90%;
     }
     .spaHeader
     {
         height: 1300px;
-        width: 500px;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -810,11 +921,15 @@ body {
         top: 0!important;
 
     }
+    .bottomSpa
+    {
+        margin-top: 600px;
+    }
     #spaTextRight
     {
         height: 50%;
         position: absolute;
-        bottom: 0;
+        bottom: 50px;
     }
     #spaImgLeft
     {
@@ -881,5 +996,92 @@ body {
         position: unset;
 
 
+    }
+}
+
+#burgerMenu
+{
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 1250px) 
+{
+    #navWrapper
+    {
+        bottom: 0;
+    }
+    #loginButton
+    {
+        height: 50px;
+        border-radius: 50px;
+    }
+    #headerWrapper
+    {
+        height: 162px;
+    }
+}
+
+@media only screen and (max-width: 750px) 
+{
+    .poolText
+    {
+        padding-top: 25px;
+    }
+    #navWrapper
+    {
+        display: none;
+    }
+    #loginButton
+    {
+        height: 50px;
+        border-radius: 50px;
+    }
+    #headerWrapper
+    {
+        height: 162px;
+    }
+    #socials
+    {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        margin-top: 100px;
+        justify-content: center;
+        gap: 10px;
+    }
+    #burgerMenu
+    {
+        display: block;
+        width: 50px;
+        position: absolute;
+        right: 15px;
+        color: blue;
+        top: 25px;
+    }
+    #loginWrapper
+    {
+        display: none;
+    }
+    .logo
+    {
+        margin: auto;
+        margin-top: 10px;
+        right: 0;
+    }
+    #mobile
+    {
+        width: auto;
+        justify-content: flex-start;
+    }
+    #email{
+        justify-content: flex-start;
+        width: auto;
+    }
+    #header
+    {
+        margin-top: 50px;
     }
 }
