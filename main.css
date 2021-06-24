@@ -810,6 +810,7 @@ margin-right: 25px;
         width: 80%;
         height: 100%;
         margin-bottom: 150px;
+        border-bottom-right-radius: 50px;
       }
       
     #top .poolPicOne 
@@ -862,6 +863,9 @@ margin-right: 25px;
         width: 80%;
         height: 100%;
         margin-bottom: 150px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+
       }
       #browseNow
       { 
@@ -873,6 +877,13 @@ margin-right: 25px;
           justify-content: center;
           color: white;
           font-family: navFont;
+          border-radius: 0px;
+          border-bottom-right-radius: 50px;
+          border-bottom-left-radius: 50px;
+      }
+      #browseNow:hover
+      {
+          border-bottom-right-radius: 50px;
       }
 
     #bottom .poolPicOne 
@@ -888,6 +899,10 @@ margin-right: 25px;
     { 
         position: relative;
         grid-area: poolTextTwo; 
+    }
+    #bottom .poolTextTwo p
+    {
+        height: auto;
     }
     #bottom .poolTextOne 
     { 
@@ -909,8 +924,7 @@ margin-right: 25px;
     #parallax
     {
         height:400px;
-        background-position-x: -350px;
-        background-position-y: -50px;
+       
     }
     #bufferText
     {

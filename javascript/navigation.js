@@ -59,18 +59,6 @@
 
     }
 
-    document.getElementById("scrollMission").addEventListener("click", scrollDown);
-
-
-
-    function scrollDown()
-    {
-        $('html, body').animate({
-            scrollTop: 700,
-        }, 1000);
-
-    }
-
 
 
     function revealLoginScreen()
