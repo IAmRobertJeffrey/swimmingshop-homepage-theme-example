@@ -564,7 +564,6 @@ margin-right: 25px;
         width: 50px;
         position: absolute;
         right: 15px;
-        color: blue;
         top: 25px;
     }
     #loginWrapper
@@ -636,6 +635,12 @@ margin-right: 25px;
         justify-content: center;
         font-family: navFont, serif;
         color: white;
+        border-bottom-right-radius: 50px;
+        transition: all ease-in-out 0.2s;
+    }
+    #contactUs:hover
+    {
+        background-color: #0b5990;
     }
     
     #top {
@@ -702,11 +707,11 @@ margin-right: 25px;
       }
       .poolTextTwo p 
       {
-          height:calc(100% - 100px)
+          height:calc(100% - 200px)
       }
       #browseNow
       { 
-          width: 100%;
+          width: 80%;
           height: 100px;
           background-color: #48ABF0;
           display: flex;
@@ -714,6 +719,13 @@ margin-right: 25px;
           justify-content: center;
           color: white;
           font-family: navFont;
+          border-radius: 50px;
+          transition: all ease-in-out 0.2s;
+      }
+      #browseNow:hover
+      {
+          background-color: #0b5990;
+          border-bottom-right-radius: 0px;
       }
 
     #bottom .poolPicOne 
@@ -723,12 +735,16 @@ margin-right: 25px;
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url(./img/spaleft.jpg);
+        border-top-left-radius: 50px;
         
     }
     #bottom .poolTextTwo 
     { 
         position: relative;
         grid-area: poolTextTwo; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     #bottom .poolTextOne 
     { 
@@ -741,6 +757,7 @@ margin-right: 25px;
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url(./img/sparight.jpeg);
+        border-top-right-radius: 50px;
        
     }
 
