@@ -32,7 +32,8 @@ body {
 {
     height:100%;
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -90,12 +91,24 @@ body {
     pointer-events: none
 }
 
+
+
+#content
+{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+   
+}
+
 #parallax {
     /* background-image: url("img/mainpoolphoto.jpg"); */
     height: 800px;
-    width: 100%;
     float: left;
-
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,22 +135,6 @@ body {
 #pool1, #pool2, #pool3
 {
     display: none;
-}
-
-#wellness {
-    width: 915px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 80px;
-    backdrop-filter: contrast(0.5);
-}
-
-#wellness p {
-    color: white;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-    font-family: scriptina;
 }
 
 #navWrapper {
@@ -204,30 +201,6 @@ transform: translateX(-50%)
     font-family: navFont;
     letter-spacing: 3px;
 
-}
-
-#fadeIn {
-    float: left;
-    height: 100px;
-    width: 150px;
-    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0.33, rgba(245, 245, 245, 0.0)), color-stop(0.67, rgba(245, 245, 245, 0.35)));
-    background-image: -moz-linear-gradient(left, rgba(245, 245, 245, 0.35), rgb(0, 255, 255) 67%);
-}
-
-#fadeOut {
-    float: left;
-    height: 100px;
-    width: 150px;
-    background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0.33, rgba(245, 245, 245, 0.0)), color-stop(0.67, rgba(245, 245, 245, 0.35)));
-    background-image: -moz-linear-gradient(right, rgba(245, 245, 245, 0.35), rgb(0, 255, 255) 67%);
-    z-index: 0;
-    position: relative;
-}
-
-#spaContainer {
-    height: 1300px;
-    width: 100%;
-    float: left;
 }
 
 #socials {
@@ -297,61 +270,6 @@ margin-right: 25px;
     font-family: navFont;
 }
 
-.poolInfo {
-    width: 50%;
-    height: 500px;
-    background-color: #E2E2E5;
-    float: left;
-}
-
-#poolPicLeft {
-    width: 50%;
-    height: 100%;
-    float: right;
-    background-image: url("img/lefteris-kallergis-ewSBvLSp3Tc-unsplash.jpg");
-
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#poolPicRight {
-    width: 50%;
-    height: 100%;
-    background-image: url("img/poolsteps2.jpg");
-    float: left;
-}
-
-.poolText {
-    height: 100%;
-    width: calc(100% - 52.5%);
-    float: left;
-    padding: 50px;
-}
-
-.poolText h1 {
-    text-align: center;
-    font-family: elegant;
-    font-size: 50px;
-    letter-spacing: 10px;
-}
-
-.poolText p {
-    font-family: elegant;
-    font-size: 34px;
-    text-align: justify-all;
-}
-
-.shadowed {
-    border: none;
-    height: 0px;
-    width: 98%;
-    border-bottom: 0px solid #1f1209;
-    box-shadow: 0 0px 15px 3px #333;
-    margin: 0px auto 150px;
-
-}
-
 #footer {
 
     width: 100%;
@@ -392,8 +310,6 @@ margin-right: 25px;
     height: 100%;
     float: left;
     background-color: rgba(7, 106, 155, 0.2);
-    margin-left: 25px;
-    margin-right: 25px;
 
 
     box-shadow: 20px 10px 20px 5px rgba(5, 78, 114, 0.34);
@@ -443,215 +359,10 @@ margin-right: 25px;
     transition: background-color 200ms ease-in-out;
 }
 
-.top {
-    border-top-left-radius: 50px;
-}
-
-.bottom {
-    border-bottom-right-radius: 50px;
-}
-
 #mapHeader {
     margin-bottom: 0;
 }
 
-#getInTouchWrapper {
-
-    height: 12%;
-    width: 50%;
-    border-bottom-right-radius: 50px;
-    float: left;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-}
-
-#getInTouch {
-    float: left;
-    height: 100%;
-    width: 100%;
-    background-color: #48ABF0;
-    border-bottom-right-radius: 50px;
-    border: none;
-    font-family: navFont, serif;
-    font-size: 20px;
-    color: whitesmoke;
-    -webkit-transition: background-color 200ms ease-in-out;
-    -ms-transition: background-color 200ms ease-in-out;
-    transition: border-top-left-radius 200ms ease-in-out, background-color 200ms ease-in-out;
-}
-
-#rightPoolText {
-    height: 100%;
-    padding-bottom: 0;
-}
-
-#rightPoolInfo {
-    border-bottom-right-radius: 50px;
-    position: relative;
-}
-
-#buttonRightSideShadow {
-    height: 50%;
-    width: 10%;
-    bottom: 0;
-    right: 0;
-    border-bottom-right-radius: 50px;
-    border: none;
-}
-
-#getInTouch:hover {
-    background-color: #076a9b;
-    border-top-left-radius: 50px;
-    -webkit-transition: background-color 200ms ease-in-out;
-    -ms-transition: background-color 200ms ease-in-out;
-    transition: border-top-left-radius 200ms ease-in-out, background-color 200ms ease-in-out;
-}
-
-.spaInfo {
-    width: 50%;
-    height: calc(100% - 50px);
-    background-color: #E2E2E5;
-    position: absolute;
-    bottom: 0;
-}
-
-#spaInfoLeft {
-    left: 0;
-}
-
-#spaInfoRight {
-    right: 0;
-}
-
-.spaHeader {
-    width: 100%;
-    height: 550px;
-    background-color: #0587CA;
-    position: relative;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    box-shadow: inset 0px 20px 30px -14px rgb(0 0 0 / 71%);
-    box-shadow:
-  0 2.3px 1.9px rgba(0, 0, 0, 0.028),
-  0 5.4px 4.3px rgba(0, 0, 0, 0.041),
-  0 9.7px 7.7px rgba(0, 0, 0, 0.051),
-  0 16.1px 12.8px rgba(0, 0, 0, 0.059),
-  0 26.5px 21.2px rgba(0, 0, 0, 0.069),
-  0 46.2px 37px rgba(0, 0, 0, 0.082),
-  0 100px 80px rgba(0, 0, 0, 0.11)
-;
-margin-bottom: 150px;
-   
-}
-
-.poolHeader {
-    width: 1000px;
-    height: 1000px;
-    background-color: #0587CA;
-    position: relative;
-    border-bottom-right-radius: 50px;
-    box-shadow:
-  0 2.3px 1.9px rgba(0, 0, 0, 0.028),
-  0 5.4px 4.3px rgba(0, 0, 0, 0.041),
-  0 9.7px 7.7px rgba(0, 0, 0, 0.051),
-  0 16.1px 12.8px rgba(0, 0, 0, 0.059),
-  0 26.5px 21.2px rgba(0, 0, 0, 0.069),
-  0 46.2px 37px rgba(0, 0, 0, 0.082),
-  0 100px 80px rgba(0, 0, 0, 0.11)
-;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 150px;
-
-}
-
-
-
-.spaText {
-    width: 50%;
-    height: 100%;
-    padding: 50px;
-    float: left;
-    bottom: 0;
-    position: absolute;
-}
-
-#spaImgLeft {
-    background-image: url("img/spaleft.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: 0;
-}
-
-#spaImgRight {
-    background-image: url("img/sparight.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    right: 0;
-}
-
-.spaText p {
-    font-family: elegant;
-    font-size: 34px;
-    text-align: justify-all;
-}
-
-#spaTextLeft {
-    right: 0;
-}
-
-#spaTextTwo {
-    margin-top: 50px;
-}
-
-#browseSpasWrapper {
-    height: 25%;
-    width: 100%;
-
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50px;
-    margin-top: 75px;
-
-    -webkit-transition: background-color 200ms ease-in-out;
-    -ms-transition: background-color 200ms ease-in-out;
-    transition: border-top-left-radius 200ms ease-in-out, background-color 200ms ease-in-out;
-}
-
-#browseSpas {
-    height: 100%;
-    width: 100%;
-    background-color: #48ABF0;
-    float: left;
-    border-radius: 50px;
-    border: none;
-    font-family: navFont, serif;
-    font-size: 20px;
-    color: whitesmoke;
-    -webkit-transition: background-color 200ms ease-in-out;
-    -ms-transition: background-color 200ms ease-in-out;
-    transition: border-top-left-radius 200ms ease-in-out, background-color 200ms ease-in-out;
-}
-
-#browseSpasWrapper:hover {
-    background-color: #076a9b;
-    border-top-left-radius: 0px;
-    -webkit-transition: background-color 200ms ease-in-out;
-    -ms-transition: background-color 200ms ease-in-out;
-    transition: border-top-left-radius 200ms ease-in-out, background-color 200ms ease-in-out;
-}
-
-#browseSpas:hover {
-    background-color: #076a9b;
-    border-top-left-radius: 0px;
-    -webkit-transition: background-color 200ms ease-in-out;
-    -ms-transition: background-color 200ms ease-in-out;
-    transition: border-top-left-radius 200ms ease-in-out, background-color 200ms ease-in-out;
-}
 #loginWrapper
 {
     display: flex;
@@ -796,77 +507,6 @@ margin-bottom: 150px;
     display: flex;
 }
 
-@media only screen and (min-width: 1018px) {
-    #spaContainer {
-        height: 2300px;
-        width: 100%;
-        float: left;
-    }
-    .poolInfo
-    {
-        width: 1000px;
-        float: none;
-        margin-left: auto;
-        margin-right: auto;
-
-
-    }
-    .poolText
-    {
-        width:50%;
-    }
-    .shadowed
-    {
-        width: 975px;
-    }
-    .spaHeader
-    {
-        width: 1000px;
-        height: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-    .spaInfo{
-        width:50%;
-        height: calc(100% - 50px);
-        bottom: 0;
-
-    }
-    #spaImgLeft
-    {
-        height: 50%;
-        top: 0;
-        border-bottom-left-radius: 50px;
-
-    }
-    #spaTextRight
-    {
-        height: 50%;
-        bottom: 0;
-    }
-    #spaTextLeft
-    {
-        height: 50%;
-        bottom: 0;
-    }
-    #spaImgRight
-    {
-        height: 50%;
-        top: 0;
-        border-bottom-right-radius: 50px;
-    }
-    .spaText
-    {
-        width: 100%;
-
-    }
-    #spaHeaderWrapper{
-        width: 100%;
-        height: 1000px;
-        
-    }
-}
 
 #burgerMenu
 {
@@ -951,5 +591,441 @@ margin-bottom: 150px;
     #header
     {
         margin-top: 50px;
+    }
+}
+
+.info 
+    {
+        height: 1000px;
+        width: 500px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "poolTextOne poolPicOne"
+          "poolPicTwo poolTextTwo";
+
+          box-shadow: 0 2.3px 1.9px rgb(0 0 0 / 3%), 0 5.4px 4.3px rgb(0 0 0 / 4%), 0 9.7px 7.7px rgb(0 0 0 / 5%), 0 16.1px 12.8px rgb(0 0 0 / 6%), 0 26.5px 21.2px rgb(0 0 0 / 7%), 0 46.2px 37px rgb(0 0 0 / 8%), 0 100px 80px rgb(0 0 0 / 11%);
+       
+    }
+
+    .poolTextOne, .poolTextTwo
+    {
+        
+        font-size: 2.5rem;
+        font-family: elegant, serif;
+    }
+    .poolTextOne p, .poolTextTwo p
+    {
+        width: 100%;
+        padding: 30px;
+    }
+
+    #contactUs
+    {
+        height: 100px;
+        width: 100%;
+        background-color: #48ABF0;  
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        font-family: navFont, serif;
+        color: white;
+    }
+    
+    #top {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-columns: 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: column;
+        grid-template-areas:
+          "poolTextOne poolPicOne"
+          "poolPicTwo poolTextTwo"
+          ;
+        width: 1000px;
+        height: 1000px;
+        margin-bottom: 150px;
+      }
+      
+    #top .poolPicOne 
+    { 
+        grid-area: poolPicOne; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/lefteris-kallergis-ewSBvLSp3Tc-unsplash.jpg);
+    }
+    #top .poolTextTwo 
+    { 
+        position: relative;
+        grid-area: poolTextTwo; 
+    }
+    #top .poolTextTwo p 
+    {
+        height: calc(100% - 100px);
+    }
+    #top .poolTextOne 
+    { 
+        grid-area: poolTextOne; 
+    }
+    #top .poolPicTwo 
+    { 
+        grid-area: poolPicTwo; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/poolsteps2.jpg);
+    }
+
+    #bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-columns: 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: column;
+        grid-template-areas:
+          "poolPicOne poolPicTwo"
+          "poolTextOne poolTextTwo";
+        width: 1000px;
+        height: 1000px;
+        margin-bottom: 150px;
+      }
+      .poolTextTwo p 
+      {
+          height:calc(100% - 100px)
+      }
+      #browseNow
+      { 
+          width: 100%;
+          height: 100px;
+          background-color: #48ABF0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-family: navFont;
+      }
+
+    #bottom .poolPicOne 
+    { 
+        grid-area: poolPicOne; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/spaleft.jpg);
+        
+    }
+    #bottom .poolTextTwo 
+    { 
+        position: relative;
+        grid-area: poolTextTwo; 
+    }
+    #bottom .poolTextOne 
+    { 
+        grid-area: poolTextOne; 
+    }
+    #bottom .poolPicTwo 
+    { 
+        grid-area: poolPicTwo; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/sparight.jpeg);
+       
+    }
+
+
+    @media only screen and (max-width: 1030px) 
+    {
+        #parallax
+    {
+        height:400px;
+        
+    }
+    #bufferText
+    {
+        display: none;
+    }
+    .poolTextOne, .poolTextTwo
+    {
+       
+        font-size: 2rem;
+        font-family: elegant, serif;
+    }
+
+    #contactUs
+    {
+        height: 100px;
+        width: 100%;
+        background-color: #48ABF0;  
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        font-family: navFont, serif;
+        color: white;
+    }
+    
+    #top {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.25fr 1.25fr 1.25fr;
+        grid-auto-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: column;
+        grid-template-areas:
+          "poolTextOne"
+          "poolPicOne"
+          "poolPicTwo"
+          "poolTextTwo"
+          ;
+        width: 80%;
+        height: 100%;
+        margin-bottom: 150px;
+      }
+      
+    #top .poolPicOne 
+    { 
+        grid-area: poolPicOne; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/lefteris-kallergis-ewSBvLSp3Tc-unsplash.jpg);
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+    #top .poolTextTwo 
+    { 
+        position: relative;
+        grid-area: poolTextTwo; 
+    }
+    #top .poolTextTwo p 
+    {
+        height: calc(100% - 100px);
+    }
+    #top .poolTextOne 
+    { 
+        grid-area: poolTextOne; 
+    }
+    #top .poolPicTwo 
+    { 
+        grid-area: poolPicTwo; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/poolsteps2.jpg);
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    #bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 1fr 1.5fr 1.25fr;
+        grid-auto-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: column;
+        grid-template-areas:
+          "poolPicOne"
+          "poolTextOne"
+          "poolPicTwo"
+          "poolTextTwo";
+        width: 80%;
+        height: 100%;
+        margin-bottom: 150px;
+      }
+      #browseNow
+      { 
+          width: 100%;
+          height: 100px;
+          background-color: #48ABF0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-family: navFont;
+      }
+
+    #bottom .poolPicOne 
+    { 
+        grid-area: poolPicOne; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/lefteris-kallergis-ewSBvLSp3Tc-unsplash.jpg);
+        border-radius: 50px;
+    }
+    #bottom .poolTextTwo 
+    { 
+        position: relative;
+        grid-area: poolTextTwo; 
+    }
+    #bottom .poolTextOne 
+    { 
+        grid-area: poolTextOne; 
+    }
+    #bottom .poolPicTwo 
+    { 
+        grid-area: poolPicTwo; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/poolsteps2.jpg);
+        border-radius: 50px;
+    }
+    }
+
+@media only screen and (max-width: 500px) 
+{
+    #parallax
+    {
+        height:400px;
+        background-position-x: -350px;
+        background-position-y: -50px;
+    }
+    #bufferText
+    {
+        display: none;
+    }
+    .poolTextOne, .poolTextTwo
+    {
+       
+        font-size: 2rem;
+        font-family: elegant, serif;
+    }
+
+    #contactUs
+    {
+        height: 100px;
+        width: 100%;
+        background-color: #48ABF0;
+        bottom:0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        font-family: navFont, serif;
+        color: white;
+    }
+    
+    #top {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.75fr 0.5fr 0.5fr 1.25fr;
+        grid-auto-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: column;
+        grid-template-areas:
+          "poolTextOne"
+          "poolPicOne"
+          "poolPicTwo"
+          "poolTextTwo"
+          ;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 150px;
+      }
+      
+    #top .poolPicOne 
+    { 
+        grid-area: poolPicOne; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/lefteris-kallergis-ewSBvLSp3Tc-unsplash.jpg);
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+    #top .poolTextTwo 
+    { 
+        position: relative;
+        grid-area: poolTextTwo; 
+    }
+    #top .poolTextOne 
+    { 
+        grid-area: poolTextOne; 
+    }
+    #top .poolPicTwo 
+    { 
+        grid-area: poolPicTwo; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/poolsteps2.jpg);
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    #bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1.25fr;
+        grid-auto-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: column;
+        grid-template-areas:
+          "poolPicOne"
+          "poolTextOne"
+          "poolPicTwo"
+          "poolTextTwo";
+        width: 100%;
+        height: 100%;
+        margin-bottom: 150px;
+      }
+      #browseNow
+      {
+         bottom: 0%;
+         position: absolute;
+          width: 100%;
+          height: 100px;
+          background-color: #48ABF0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-family: navFont;
+      }
+
+    #bottom .poolPicOne 
+    { 
+        grid-area: poolPicOne; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/lefteris-kallergis-ewSBvLSp3Tc-unsplash.jpg);
+        border-radius: 50px;
+    }
+    #bottom .poolTextTwo 
+    { 
+        position: relative;
+        grid-area: poolTextTwo; 
+    }
+    #bottom .poolTextOne 
+    { 
+        grid-area: poolTextOne; 
+    }
+    #bottom .poolPicTwo 
+    { 
+        grid-area: poolPicTwo; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./img/poolsteps2.jpg);
+        border-radius: 50px;
     }
 }

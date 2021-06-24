@@ -25,7 +25,6 @@
     function changePicture() 
     {
         document.getElementById("parallax").style.opacity = "1"
-        console.log("hey");
         document.getElementById('parallax').style.backgroundImage = "url(" + images[i] + ")";
         if(i < images.length - 1)
         {
