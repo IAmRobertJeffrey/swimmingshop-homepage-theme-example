@@ -796,7 +796,7 @@ margin-bottom: 150px;
     display: flex;
 }
 
-@media only screen and (max-width: 1890px) and (min-width: 1018px) {
+@media only screen and (min-width: 1018px) {
     #spaContainer {
         height: 2300px;
         width: 100%;
@@ -868,137 +868,6 @@ margin-bottom: 150px;
     }
 }
 
-@media only screen and (max-width: 1017px) {
-
-    .shadowed
-    {
-        width: 500px;
-    }
-    #spaContainer
-    {
-        height: 3050px;
-    }
-
-    .poolInfo
-    {
-        width: 100%;
-
-
-    }
-    .poolHeader
-    {
-        width: 90%;
-    }
-    .spaHeader
-    {
-        height: 1300px;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #spaHeaderWrapper{
-        width: 500px;
-        height: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #spaInfoLeft
-    {
-
-        width: 100%;
-        height: 50%;
-        top: 0;
-    }
-    #spaInfoRight
-    {
-        width: 100%;
-        height: 50%;
-    }
-    #spaTextLeft
-    {
-        height: 50%;
-        width: 100%;
-        top: 0!important;
-
-    }
-    .bottomSpa
-    {
-        margin-top: 600px;
-    }
-    #spaTextRight
-    {
-        height: 50%;
-        position: absolute;
-        bottom: 50px;
-    }
-    #spaImgLeft
-    {
-        height: 250px;
-        bottom: 0!important;
-        border-top-right-radius: 50px;
-        border-top-left-radius: 50px;
-    }
-    #spaImgRight
-    {
-        border-bottom-right-radius: 50px;
-        border-bottom-left-radius: 50px;
-        height: 250px;
-        position: absolute;
-        top: 0;
-
-    }
-    .spaText
-     {
-        width: 100%;
-     }
-    #leftPoolInfo
-    {
-        height: 750px;
-        margin-left: auto;
-        margin-right: auto;
-        float: unset;
-        position: relative;
-    }
-    #rightPoolInfo
-    {
-        height: 500px;
-        float: unset;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .poolText{
-        width: 100%;
-        height: 50%;
-        float: left;
-    }
-    #poolPicLeft
-    {
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        width: 100%;
-        height:250px;
-        bottom: 0;
-        position: absolute;
-        float: left;
-    }
-    #poolPicRight
-    {
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-        width: 100%;
-        height: 50%;
-        float: left;
-
-    }
-    #getInTouchWrapper
-    {
-        width:100%;
-        position: unset;
-
-
-    }
-}
-
 #burgerMenu
 {
     display: none;
@@ -1025,10 +894,6 @@ margin-bottom: 150px;
 
 @media only screen and (max-width: 750px) 
 {
-    .poolText
-    {
-        padding-top: 25px;
-    }
     #navWrapper
     {
         display: none;
